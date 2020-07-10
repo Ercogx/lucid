@@ -1,38 +1,56 @@
 // USER VARIABLES SECTION
 
-$accent: orange; // Accent Color
+$accent: #008ed6; // Accent Color
+$lightGrey: #fffefe;
 $fontsize: 16px; // Body Font Size
-$textcolor: #333; // Text Color
+$textcolor: #999; // Text Color
 $system: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
-$roboto: Roboto, sans-serif; // Roboto Font Family
+$SourceSansPro: 'Source Sans Pro', sans-serif;
+$Quicksand: 'Quicksand', sans-serif;
 
 // Bootstrap compatible gutter variable => $gutter
-$grid-gutter-width: 20px;
+$grid-gutter-width: 30px;
 $gutter: $grid-gutter-width;
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 576px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992px,
+  // Extra large screen / wide desktop
+  xl: 1260px
+);
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px
+);
 
 // IMPORT SECTION
 
-@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'; // Bootstrap Reboot collection
-@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'; // Bootstrap Breakpoints mixin
-// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss'; // Optional Bootstrap Grid
-// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss'; // Optional Bootstrap Utilites
+@import 'node_modules/bootstrap/scss/bootstrap.scss'; // Bootstrap Reboot collection
 
 // FONTS LOAD SECTION
 
-@mixin font($fname, $fstyle, $fweight, $furl) {
-	@font-face {
-		font-family: $fname;
-		font-style: $fstyle;
-		font-weight: $fweight;
-		// font-display: swap; // Uncomment to initially display system fonts
-		src: local($fname), url($furl) format('woff2');
-	}
-}
+// @mixin font($fname, $fstyle, $fweight, $furl) {
+// 	@font-face {
+// 		font-family: $fname;
+// 		font-style: $fstyle;
+// 		font-weight: $fweight;
+// 		// font-display: swap; // Uncomment to initially display system fonts
+// 		src: local($fname), url($furl) format('ttf');
+// 	}
+// }
 
-@include font('Roboto', normal, 400, '../fonts/roboto-regular-webfont.woff2');
-@include font('Roboto', italic, 400, '../fonts/roboto-italic-webfont.woff2');
-@include font('Roboto', normal, 700, '../fonts/roboto-bold-webfont.woff2');
-@include font('Roboto', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2');
+// @include font('Quicksand', normal, 700, '../fonts/Quicksand/static/Quicksand-Bold.ttf');
+// @include font('SourceSansPro', normal, 700, '../fonts/Source_Sans_Pro/SourceSansPro-Bold.ttf');
+// @include font('SourceSansPro', normal, 600, '../fonts/Source_Sans_Pro/SourceSansPro-SemiBold.ttf');
+// @include font('SourceSansPro', normal, 400, '../fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf');
+// @include font('SourceSansPro', normal, 300, '../fonts/Source_Sans_Pro/SourceSansPro-Light.ttf');
 
 // GENERAL DOCUMENT STYLES
 
@@ -52,11 +70,57 @@ input, textarea {
 }
 
 body {
-	font-family: $roboto;
+	font-family: $SourceSansPro;
 	font-size: $fontsize;
 	min-width: 320px;
 	position: relative;
 	line-height: 1.65;
 	overflow-x: hidden;
 	color: $textcolor;
+}
+
+.btn{
+	background-color: transparent;
+	width: 160px;
+	height: 50px;
+	text-align: center;
+	line-height: 48px;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #fff;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 3px;
+	padding: 0;
+}
+.btn-primary{
+	background-color: $accent;
+	border: none;
+}
+
+.below_h2{
+	color: $accent;
+	font-weight: 700;
+	margin-bottom: 15px;
+	letter-spacing: 1.4px;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+.h2{
+	font-weight: 600;
+	font-size: 36px;
+	padding-bottom: 35px;
+	position: relative;
+	&::after{
+		content: '';
+		background-image: url('../images/dest/devider.png');
+		height: 2px;
+		width: 42px;
+		position: absolute;
+		bottom: 0;
+	}
+}
+
+[class*=" icon-"]:before, [class^=icon-]:before{
+	color: $accent;
 }
