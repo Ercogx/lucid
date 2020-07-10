@@ -11,6 +11,7 @@ let paths = {
 	scripts: {
 		src: [
 			'node_modules/jquery/dist/jquery.min.js', // npm vendor example (npm i --save-dev jquery)
+			'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
 			baseDir + '/js/owl.carousel.js', // app.js. Always at the end
 			baseDir + '/js/app.js' // app.js. Always at the end
 		],

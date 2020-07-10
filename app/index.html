@@ -7,14 +7,14 @@
 	<title>Lucid</title>
 	<meta name="viewport" content="width=device-width">
 	
-	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/app.min.css">
 
 </head>
 
 <body>
 
-	<div class="hero_banner" style="background-image: url(images/dest/top_bg.jpg);">
+	<header class="hero_banner" style="background-image: url(images/dest/top_bg.jpg);">
 
 		<nav class="navbar navbar-expand-md">
 			<div class="container">
@@ -23,13 +23,14 @@
 			    <span class="navbar-toggler-icon"></span>
 			  </button>
 			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			  	<button class="navbar-close d-block d-md-none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">&times;</button>
 			    <ul class="navbar-nav ml-auto">
-			      <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-			      <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
-			      <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-			      <li class="nav-item"><a class="nav-link" href="#">Testimonials</a></li>
-			      <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
-			      <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+			      <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+			      <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+			      <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+			      <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+			      <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+			      <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
 			    </ul>
 			  </div>
 		  </div>
@@ -37,8 +38,8 @@
 
 		<section class="first_screen" role="banner">
 			<div class="container">
-				<div class="row justify-content-between align-items-start">
-					<div class="col-sm-auto">
+				<div class="row justify-content-between align-items-lg-start">
+					<div class="col-sm-auto first_screen_block">
 						<div class="first_screen_text">
 							<p class="below_title">introducing lucid theme</p>
 							<h1 class="h1">Carefully crafted and beautiful landing page.</h1>
@@ -46,44 +47,44 @@
 						</div>
 						<div class="first_screen_btn">
 							<a href="#" class="btn btn-primary">Download now</a>
-							<a href="#" class="btn">View featers</a>
+							<a href="#" class="btn">View features</a>
 						</div>
 					</div>
-					<div class="col-sm-auto">
+					<div class="col-sm-auto first_screen_img">
 						<img src="images/dest/devices.png" class="first_screen_devices" alt="">
 					</div>
 				</div>
 			</div>
 		</section>
-	</div>
+	</header>
 
-	<section class="featers">
+	<section id="features" class="featers">
 		<div class="container">
 			<p class="below_h2">product overview</p>
 			<h2 class="h2">List of amazing features</h2>
-			<div class="row justify-content-between">
-				<div class="col-md-auto">
+			<div class="row">
+				<div class="col-sm-6 col-lg-3">
 					<div class="feater">
 						<div class="feater_icons"><span class="icon-monitor"></span></div>
 						<h3 class="feater_title">Responsive</h3>
 						<p class="feater_desc">Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non ipsum lacinia consectetur.</p>
 					</div>
 				</div>
-				<div class="col-md-auto">
+				<div class="col-sm-6 col-lg-3">
 					<div class="feater">
 						<div class="feater_icons"><span class="icon-settings"></span></div>
 						<h3 class="feater_title">Customizable</h3>
 						<p class="feater_desc">Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non ipsum lacinia consectetur.</p>
 					</div>
 				</div>
-				<div class="col-md-auto">
+				<div class="col-sm-6 col-lg-3">
 					<div class="feater">
 						<div class="feater_icons"><span class="icon-like"></span></div>
 						<h3 class="feater_title">Lovely design</h3>
 						<p class="feater_desc">Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non ipsum lacinia consectetur.</p>
 					</div>
 				</div>
-				<div class="col-md-auto">
+				<div class="col-sm-6 col-lg-3">
 					<div class="feater">
 						<div class="feater_icons"><span class="icon-phone"></span></div>
 						<h3 class="feater_title">Mobile Friendly</h3>
@@ -94,13 +95,13 @@
 		</div>
 	</section>
 
-	<section class="devices">
+	<section id="about" class="devices">
 		<div class="container">
-			<div class="row justify-content-between">
+			<div class="row">
 				<div class="col-md-5">
-					<img src="images/dest/devices_full.png" alt="">
+					<img src="images/dest/devices_full.png" class="devices_img" alt="">
 				</div>
-				<div class="col-md-5 offset-md-1">
+				<div class="col-lg-5 offset-lg-1 col-md-7">
 					<div class="devices_text_block">
 						<p class="below_h2">dip into the details</p>
 						<h2 class="h2">Beautiful on every device</h2>
@@ -119,24 +120,26 @@
 
 	<section class="about">
 		<div class="container">
-			<div class="row align-items-center">
-				<div class="col-md-5">
-					<p class="below_h2">dip into the details</p>
-					<h2 class="h2">Super easy to customize</h2>
-					<p class="about_desc">Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+			<div class="row align-items-start">
+				<div class="col-lg-5 col-md-7">
+					<div class="about_text_block">
+						<p class="below_h2">dip into the details</p>
+						<h2 class="h2">Super easy to customize</h2>
+						<p class="about_desc">Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+					</div>
 				</div>
-				<div class="col-md-7">
+				<div class="col-lg-7 col-md-5 align-self-lg-start align-self-center">
 					<img src="images/dest/iPhone_5.png" alt="" class="about_img">
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="testimonials">
+	<section id="testimonials" class="testimonials">
 		<div class="testimonials_bg_image" style="background-image: url(images/dest/testimonials_bg.jpg);"></div>
 		<div class="testimonials_content">
 			<p class="below_h2">quality has its price</p>
-			<h2>Pricings & Plans</h2>
+			<h2 class="h2">Testimonials</h2>
 			<div class="container">
 				<div class="testimonials-carousel owl-carousel">
 
@@ -193,7 +196,7 @@
 				<div class="col-md-7">
 					<p class="cta_title">Like what you see? <span>Get this great theme now!</span></p>
 				</div>
-				<div class="col-md-4">
+				<div class="col-xl-4 col-lg-5">
 					<div class="cta_btn">
 						<a href="#" class="btn">view features</a>
 						<a href="#" class="btn btn-primary">download now</a>
@@ -203,19 +206,19 @@
 		</div>
 	</div>
 
-	<section class="pricing_plans">
+	<section id="pricing" class="pricing_plans">
 		<div class="container">
 			<p class="below_h2">quality has its price</p>
 			<h2 class="h2">Pricings & Plans</h2>
 			<div class="row">
-				<div class="col-md-3">
+				<div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
 					<div class="card">
 						<div class="card-header">
 							<h3 class="card-title">free</h3>
 						</div>
 						<div class="card_price">
 							<p class="card_price_amount"><sup>$</sup>0</p>
-							<p class="card_price_time">/ per mounth</p>
+							<p class="card_price_time">/ per month</p>
 						</div>
 						<div class="card-body">
 							<p class="card_desc">Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non ipsum <span class="card-desc_grave">lacinia</span> consectetur.</p>
@@ -223,14 +226,14 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
 					<div class="card">
 						<div class="card-header">
 							<h3 class="card-title">Personal</h3>
 						</div>
 						<div class="card_price">
 							<p class="card_price_amount"><sup>$</sup>25</p>
-							<p class="card_price_time">/ per mounth</p>
+							<p class="card_price_time">/ per month</p>
 						</div>
 						<div class="card-body">
 							<p class="card_desc">Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non ipsum <span class="card-desc_grave">lacinia</span> consectetur.</p>
@@ -238,14 +241,14 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
 					<div class="card">
 						<div class="card-header">
 							<h3 class="card-title">Business</h3>
 						</div>
 						<div class="card_price">
 							<p class="card_price_amount"><sup>$</sup>50</p>
-							<p class="card_price_time">/ per mounth</p>
+							<p class="card_price_time">/ per month</p>
 						</div>
 						<div class="card-body">
 							<p class="card_desc">Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non ipsum <span class="card-desc_grave">lacinia</span> consectetur.</p>
@@ -253,14 +256,14 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
 					<div class="card">
 						<div class="card-header">
 							<h3 class="card-title">Ultimate</h3>
 						</div>
 						<div class="card_price">
 							<p class="card_price_amount"><sup>$</sup>99</p>
-							<p class="card_price_time">/ per mounth</p>
+							<p class="card_price_time">/ per month</p>
 						</div>
 						<div class="card-body">
 							<p class="card_desc">Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non ipsum <span class="card-desc_grave">lacinia</span> consectetur.</p>
@@ -272,6 +275,73 @@
 		</div>
 	</section>
 
+	<section id="contact" class="contact">
+		<div class="container">
+			<p class="below_h2">stay in touch</p>
+			<h2 class="h2">Contact us</h2>
+			<div class="row justify-content-md-start justify-content-center">
+				<div class="col-lg-2 offset-lg-1 col-md-4 col-sm-6 mt-3 mt-sm-0">
+					<div class="contact_card">
+						<span class="contact_card_icon icon-phone"></span>
+						<a href="tel:+4151245678" class="contact_card_info">Phone: (415) 124-5678</a>
+						<p class="contact_card_info">Fax: (412) 123-8290</p>
+					</div>
+				</div>
+				<div class="col-lg-2 offset-lg-2 col-md-4 col-sm-6 mt-3 mt-sm-0">
+					<div class="contact_card">
+						<span class="contact_card_icon icon-pointer"></span>
+						<p class="contact_card_info">1001 Brickell Bay Dr.</p>
+						<p class="contact_card_info">Suite 1900 </p>
+						<p class="contact_card_info">Miami, FL 33131</p>
+					</div>
+				</div>
+				<div class="col-lg-2 offset-lg-2 col-md-4 col-sm-6 px-0 mt-3 mt-md-0">
+					<div class="contact_card">
+						<span class="contact_card_icon icon-envelope"></span>
+						<a href="mailto:support@yourname.com" class="contact_card_info">support@yourname.com</a>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-xl-8">
+					<form class="contact_form">
+						<div class="contact_form_input">
+							<input type="text" placeholder="name *" required>
+							<input type="email" placeholder="email *" required>
+							<input type="text" placeholder="subject *" required>
+						</div>
+						<div class="contact_form_textarea">
+							<textarea placeholder="message *" required></textarea>
+						</div>
+						<div class="contact_form_btn">
+							<button class="btn btn-primary">Send message</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.2104676418285!2d-80.19130798497903!3d25.763610883635838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b6823bcf83f7%3A0xef0b288e10bb269c!2zMTAwMSBCcmlja2VsbCBCYXkgRHIgIzE5MDAsIE1pYW1pLCBGTCAzMzEzMSwg0KHQv9C-0LvRg9GH0LXQvdGWINCo0YLQsNGC0Lgg0JDQvNC10YDQuNC60Lg!5e0!3m2!1suk!2sua!4v1594369281719!5m2!1suk!2sua" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="contact_map"></iframe>
+	</section>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-4">
+					<div class="footer_socials">
+						<ul class="footer_socials_list">
+							<li><a href="#" class="footer_socials_item"><span class="footer_socials_icon icon-behance"></span></a></li>
+							<li><a href="#" class="footer_socials_item"><span class="footer_socials_icon icon-dribbble"></span></a></li>
+							<li><a href="#" class="footer_socials_item"><span class="footer_socials_icon icon-twitter"></span></a></li>
+							<li><a href="#" class="footer_socials_item"><span class="footer_socials_icon icon-facebook"></span></a></li>
+							<li><a href="#" class="footer_socials_item"><span class="footer_socials_icon icon-linkedin"></span></a></li>
+						</ul>
+					</div>
+					<p class="footer_copyright">copyright © 2014 lucid onepage theme</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
 	<script src="js/app.min.js"></script>
 
 </body>
