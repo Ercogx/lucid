@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-	// Custom JS
+	// Testimonials carousel
 	$('.testimonials-carousel').owlCarousel({
     loop:true,
     margin: 25,
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 	});
 
-
+	// Slow scroll to achor
 	$(".navbar-nav").on("click",".nav-link", function (event) {
 		event.preventDefault();
 		let id  = $(this).attr('href'),
@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 	});
 
+	// Show/hide scroll on mobile when menu is close/open
 	$("#navbarSupportedContent").on("show.bs.collapse", function(){
 		$('body').css('overflow', 'hidden');
 	});
